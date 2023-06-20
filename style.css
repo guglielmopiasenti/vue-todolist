@@ -21,7 +21,9 @@ li {
     background-color: rgba(102, 16, 242, 0.8) !important;
     height: 15px
 }
-.btn-outline-danger {
+.btn-danger {
     border-radius: 50% !important;
     height: 29px;
+    background-color: rgba(102, 16, 242, 0.8) !important;
+    border-color: rgba(102, 16, 242, 0.8);
 }
