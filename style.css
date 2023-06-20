@@ -5,10 +5,13 @@ body {
     background-color: #6610f2 !important;
     border-color: #6610f2 !important;
 }
-.todo-card, ul, li {
+.todo-card, li {
     background-color: rgba(255, 255, 255, .15) !important;
     backdrop-filter: blur(5px) !important;
 }
 .input-group {
-    padding-top: 6px;
+    padding-top: 20px;
+}
+#icon {
+    height: 80px;
 }

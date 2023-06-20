@@ -20,12 +20,14 @@
   </head>
   <body>
     <!-- todolist container app -->
-    <div
-      id="root"
-      class="container d-flex flex-column justify-content-center align-items-center my-5"
-    >
-      <div class="card p-5 shadow-lg todo-card">
-        <h1 class="display-1 py-3 text-white text-center">Todo List</h1>
+    <div id="root" class="container">
+      <div
+        class="card p-5 shadow-lg todo-card d-flex flex-column justify-content-center align-items-center my-5"
+      >
+        <div class="d-flex >
+          <img id="icon" src="img/Todo_list_App_Icon-removebg.png" alt="" />
+          <h1 class="display-1 py-3 text-white text-center">Todo List</h1>
+        </div>
         <ul class="list-group">
           <!-- Displaying each todo item -->
           <li
@@ -44,7 +46,7 @@
             ></button>
           </li>
           <!-- Input field and Add button for new todos -->
-          <div class="input-group mb-3 my-2">
+          <div class="input-group">
             <input
               v-model="newTodo"
               type="text"
@@ -53,7 +55,7 @@
               @keyup.enter="addTodo"
             />
             <button
-              class="btn btn-success"
+              class="btn btn-success shadow-lg"
               type="button"
               id="button-addon2"
               @click="addTodo"
