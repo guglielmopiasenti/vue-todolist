@@ -24,43 +24,45 @@
       id="root"
       class="container d-flex flex-column justify-content-center align-items-center my-5"
     >
-      <h1 class="display-1">Todo List</h1>
-      <ul class="list-group">
-        <!-- Displaying each todo item -->
-        <li
-          v-for="todo in todoList"
-          :key="todo.text"
-          :class="{ 'text-decoration-line-through': todo.done }"
-          class="list-group-item d-flex align-items-center justify-content-between gap-3"
-          @click="toggleDone(todo)"
-        >
-          {{ todo.text }}
-          <button
-            type="button"
-            class="btn-close"
-            aria-label="Close"
-            @click="deleteTodo(todo)"
-          ></button>
-        </li>
-        <!-- Input field and Add button for new todos -->
-        <div class="input-group mb-3 my-2">
-          <input
-            v-model="newTodo"
-            type="text"
-            class="form-control"
-            placeholder="Add new todo"
-            @keyup.enter="addTodo"
-          />
-          <button
-            class="btn btn-outline-success"
-            type="button"
-            id="button-addon2"
-            @click="addTodo"
+      <div class="card p-5 shadow-lg todo-card">
+        <h1 class="display-1 py-3 text-white text-center">Todo List</h1>
+        <ul class="list-group">
+          <!-- Displaying each todo item -->
+          <li
+            v-for="todo in todoList"
+            :key="todo.text"
+            :class="{ 'text-decoration-line-through': todo.done }"
+            class="list-group-item d-flex align-items-center justify-content-between gap-3 text-white shadow-lg"
+            @click="toggleDone(todo)"
           >
-            Add
-          </button>
-        </div>
-      </ul>
+            {{ todo.text }}
+            <button
+              type="button"
+              class="btn-close"
+              aria-label="Close"
+              @click="deleteTodo(todo)"
+            ></button>
+          </li>
+          <!-- Input field and Add button for new todos -->
+          <div class="input-group mb-3 my-2">
+            <input
+              v-model="newTodo"
+              type="text"
+              class="form-control"
+              placeholder="Add new todo"
+              @keyup.enter="addTodo"
+            />
+            <button
+              class="btn btn-success"
+              type="button"
+              id="button-addon2"
+              @click="addTodo"
+            >
+              Add
+            </button>
+          </div>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
