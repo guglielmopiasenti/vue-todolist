@@ -20,5 +20,10 @@ createApp({
       ],
     };
   },
+  methods: {
+    deleteTodo(targetIndex) {
+      this.todo = this.todo.filter((task, i) => targetIndex !== 1);
+    },
+  },
   //   mounting app
 }).mount("#root");
