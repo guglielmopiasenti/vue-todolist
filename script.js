@@ -28,8 +28,14 @@ createApp({
     },
     // function to add todo item
     addTodo() {
-      this.todoList.push(this.newTask);
-      this.newTask = "";
+      if (this.newTodo.trim() !== "") {
+        this.todoList.push({
+          text: this.newTodo,
+          done: false,
+        });
+        // Clear the input field
+        this.newTodo = "";
+      }
     },
   },
   //   mounting app
