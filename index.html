@@ -19,6 +19,23 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- todolist container app -->
+    <div
+      id="root"
+      class="container d-flex flex-column justify-content-center align-items-center my-5"
+    >
+      <h1 class="display-1">Todo List</h1>
+      <ul class="list-group">
+        <li
+          v-for="todo in todoList"
+          :key="todo.text"
+          :class="{ 'crossed-out': todo.done }"
+          class="list-group-item d-flex align-items-center justify-content-between gap-3"
+        >
+          {{ todo.text }}
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
