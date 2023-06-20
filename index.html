@@ -27,9 +27,9 @@
       <h1 class="display-1">Todo List</h1>
       <ul class="list-group">
         <li
-          v-for="(todo, i) in todoList"
+          v-for="todo in todoList"
           :key="todo.text"
-          :class="{ 'crossed-out': todo.done }"
+          :class="{ 'text-decoration-line-through': todo.done }"
           class="list-group-item d-flex align-items-center justify-content-between gap-3"
         >
           {{ todo.text }}
@@ -41,11 +41,17 @@
           ></button>
         </li>
         <div class="input-group mb-3 my-2">
-          <input type="text" class="form-control" placeholder="Add new todo" />
+          <input
+            v-model="newTodo"
+            type="text"
+            class="form-control"
+            placeholder="Add new todo"
+          />
           <button
             class="btn btn-outline-success"
             type="button"
             id="button-addon2"
+            @click="addTodo"
           >
             Add
           </button>
