@@ -5,13 +5,23 @@ body {
     background-color: #6610f2 !important;
     border-color: #6610f2 !important;
 }
-.todo-card, li {
+.todo-card {
     background-color: rgba(255, 255, 255, .15) !important;
-    backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(5px);
 }
-.input-group {
-    padding-top: 20px;
+li {
+    background-color: rgba(255, 255, 255, .65) !important;
+    
 }
 #icon {
-    height: 80px;
+    height: 100px;
+}
+.li-bottom {
+    border-radius: 0 0 10px 10px !important;
+    background-color: rgba(102, 16, 242, 0.8) !important;
+    height: 15px
+}
+.btn-outline-danger {
+    border-radius: 50% !important;
+    height: 29px;
 }
