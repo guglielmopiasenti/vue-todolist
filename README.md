@@ -26,3 +26,9 @@ Provide a text input field and an "add" button: by clicking on the button, the t
 ### SUPERBONUS
 
 We insert a filter to search within the tasks.
+
+# PROCEDURE
+
+1. Use the v-for directive to iterate over the todoList array and create an <li> element for each todo item.
+2. The :class binding adds the "crossed-out" class to the <li> element if todo.done is true.
+3. {{ todo.text }} displays the text of the todo item.
