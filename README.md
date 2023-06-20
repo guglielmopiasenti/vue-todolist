@@ -32,3 +32,8 @@ We insert a filter to search within the tasks.
 1. Use the v-for directive to iterate over the todoList array and create an <li> element for each todo item.
 2. The :class binding adds the "crossed-out" class to the <li> element if todo.done is true.
 3. {{ todo.text }} displays the text of the todo item.
+4. Add a click event listener to each todo item to toggle the done property when clicked.
+5. Implement the toggleDone method to toggle the done property of the clicked todo item.
+6. Add a delete button to each todo item.
+7. Add a click event listener to the delete button to remove the corresponding todo item from the list.
+8. Implement the deleteTodo method to remove the clicked todo item from the todoList array.
