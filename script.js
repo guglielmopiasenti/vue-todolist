@@ -37,6 +37,9 @@ createApp({
         this.newTodo = "";
       }
     },
+    toggleDone(todo) {
+      todo.done = !todo.done;
+    },
   },
   //   mounting app
 }).mount("#root");
