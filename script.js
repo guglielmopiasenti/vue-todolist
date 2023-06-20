@@ -6,6 +6,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      newTodo: "",
       todoList: [
         { text: "Complete homework", done: false },
         { text: "Buy groceries", done: false },
@@ -21,8 +22,14 @@ createApp({
     };
   },
   methods: {
-    deleteTodo(targetIndex) {
-      this.todo = this.todo.filter((task, i) => targetIndex !== 1);
+    // function to delete todo item
+    deleteTodo(todo) {
+      this.todoList = this.todoList.filter((item) => item !== todo);
+    },
+    // function to add todo item
+    addTodo() {
+      this.todoList.push(this.newTask);
+      this.newTask = "";
     },
   },
   //   mounting app
