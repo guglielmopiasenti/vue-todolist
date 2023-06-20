@@ -31,6 +31,7 @@
           :key="todo.text"
           :class="{ 'text-decoration-line-through': todo.done }"
           class="list-group-item d-flex align-items-center justify-content-between gap-3"
+          @click="toggleDone(todo)"
         >
           {{ todo.text }}
           <button
@@ -46,6 +47,7 @@
             type="text"
             class="form-control"
             placeholder="Add new todo"
+            @keyup.enter="addTodo"
           />
           <button
             class="btn btn-outline-success"
